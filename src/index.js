@@ -4,11 +4,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'semantic-ui-css/semantic.min.css';
 import { BrowserRouter, } from "react-router-dom";
+import AccountProvider from "./providers/AccountProvider";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <AccountProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AccountProvider>,
   document.getElementById('root')
 );
 
